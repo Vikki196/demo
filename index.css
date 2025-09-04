@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+.hero-section {
+    height: 400vh;
+    /* 增加英雄区高度，提供更多滚动空间 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-image {
+    background-image: url(./image1.jpg);
+    background-size: 200% 200%;
+    /* 初始大小更大，只显示部分内容 */
+    background-repeat: no-repeat;
+    background-position: center 30%;
+    /* 初始位置偏上，只显示图片的一部分 */
+    position: fixed;
+    /* 固定定位，创造视差效果 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /* 高度为视口高度 */
+    z-index: 1;
+    transition: all 0.1s ease-out;
+    /* 平滑过渡效果 */
+}
+
+.content-section {
+    background-color: #fff;
+    padding: 50px 20px;
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.feature {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
